@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function ambilJudul(){
+            //var judul = document.querySelector('h1').innerText;
+            //console.log('Judul Halaman: ' + judul);
+
+            var judul = document.getElementsByTagName('h1');
+            //console.log(judul[0]);
+
+            console.log("cara 1");
+            console.log('Judul Halaman: ' + judul[0].innerText);
+            console.log('Judul Halaman: ' + judul[1].innerText);
+
+            console.log("cara 2");
+            for (var i = 0; i < judul.length; i++) {
+                console.log('Judul Halaman: ' + judul[i].innerText);
+            }
+
+            var judul2 = document.getElementById('kulinar_wisata');
+            console.log('Judul ke 3 : ' + judul2.innerText);
+
+        }
+
+        function ubahJudul(){
+            var judul_baru = document.getElementById('judul_baru').value;
+            var judul = document.getElementById('wisata_diy');
+            judul.innerText = judul_baru;
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>Kuliner DIY</h1>
+
+   <h1 id="wisata_diy">Wisata DIY</h1>
+
+   <h2 id="kulinar_wisata">Kuliner dan Wisata</h2>
+
+   <p>Daerah Istimewa Yogyakarta (DIY) selalu punya cara untuk memikat hati para wisatawan. Terkenal sebagai pusat seni dan budaya, Jogja menyuguhkan perpaduan sempurna antara warisan sejarah dan keindahan alam. Kamu bisa menjelajahi keagungan Candi Prambanan, menikmati suasana khas Keraton Yogyakarta, hingga berburu kuliner legendaris seperti gudeg di sepanjang Jalan Malioboro. Bagi pecinta alam, pesona matahari terbit di Puncak Suroloyo atau keindahan pantai pasir putih di Gunungkidul siap memanjakan mata. Kehangatan warganya serta keramahan budaya lokal membuat setiap sudut DIY terasa bagaikan rumah. Tak heran jika liburan ke Jogja selalu menyisakan rindu dan kenangan manis yang tak terlupakan bagi siapa saja.</p>
+
+
+
+   <button onclick="ambilJudul()">
+        Ambil Judul
+    </button>
+
+    <br>
+    <br>
+
+   judul baru : <input type="text" id="judul_baru" placeholder="Masukkan judul baru"> <br>
+   <button onclick="ubahJudul()">Ubah Judul</button>
+
+</body>
+</html>

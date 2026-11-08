@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var judul = $('#wisata_diy').text();
+            console.log('Judul Halaman: ' + judul);
+        });
+
+        function ubahJudul(){
+            var judul_baru = $('#judul_baru').val();
+            $('#wisata_diy').text(judul_baru);
+            console.log('Judul Baru : ' + judul_baru);
+        }
+    </script>
+</head>
+<body>
+    <h1>Kuliner DIY</h1>
+
+   <h1 id="wisata_diy">Wisata DIY</h1>
+
+   <h2 id="kulinar_wisata">Kuliner dan Wisata</h2>
+
+   <p>Daerah Istimewa Yogyakarta (DIY) selalu punya cara untuk memikat hati para wisatawan. Terkenal sebagai pusat seni dan budaya, Jogja menyuguhkan perpaduan sempurna antara warisan sejarah dan keindahan alam. Kamu bisa menjelajahi keagungan Candi Prambanan, menikmati suasana khas Keraton Yogyakarta, hingga berburu kuliner legendaris seperti gudeg di sepanjang Jalan Malioboro. Bagi pecinta alam, pesona matahari terbit di Puncak Suroloyo atau keindahan pantai pasir putih di Gunungkidul siap memanjakan mata. Kehangatan warganya serta keramahan budaya lokal membuat setiap sudut DIY terasa bagaikan rumah. Tak heran jika liburan ke Jogja selalu menyisakan rindu dan kenangan manis yang tak terlupakan bagi siapa saja.</p>
+
+
+
+   <button onclick="ambilJudul()">
+        Ambil Judul
+    </button>
+
+    <br>
+    <br>
+
+   judul baru : <input type="text" id="judul_baru" placeholder="Masukkan judul baru"> <br>
+   <button onclick="ubahJudul()">Ubah Judul</button>
+</body>
+</html>
